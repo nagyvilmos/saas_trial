@@ -3,6 +3,8 @@
     <h3>A membership site where entrepreneurs can meet developers.</h3>
 </div>
 
+<%= link_to "Create your profile", new_user_profile_path(current_user) if current_user %>
+
 <div class='row'>
   <div class="col-md-6">
       <div class="well">
