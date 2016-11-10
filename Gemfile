@@ -46,6 +46,9 @@ gem 'stripe',   '~> 1.16.1'
 # hides secret keys
 gem 'figaro',   '~> 1.0.0'
 
+# provide image uploads
+gem 'paperclip', '~> 4.2.1'
+
 # font awesome for prettyness
 gem "font-awesome-sass", '4.2.0'
 
