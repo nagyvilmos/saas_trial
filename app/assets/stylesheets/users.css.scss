@@ -1,4 +1,6 @@
 .profile-avatar {
+    height: 128;
+    width: 128;
     border-radius: 40%;
     box-shadow: 4px 4px 4px #cccccc;
     border: 2px white;
@@ -29,4 +31,8 @@
 .well.contact-info {
     background-color: #5bc0de;
     border-color: #46b8da;
+}
+
+.well.alt-well {
+    background-color: #dbdbdb;
 }
