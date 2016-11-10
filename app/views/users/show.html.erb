@@ -1,14 +1,34 @@
 <% if @user.profile %>
-    <% if @user.profile.avatar_file_name %>
-        <%= image_tag @user.profile.avatar.url( :thumb ) %>
-    <% end %>
-    <%= @user.profile.first_name %> <%= @user.profile.last_name %><br/>
-    <%= @user.profile.job_title %><br/>
-    <% if current_user.plan_id == 2 || current_user.id == @user.id %>
-        <%= @user.profile.phone_number %><br/>
-        <%= @user.profile.contact_email %><br/>
-    <% end %>
-    <%= @user.profile.description %><br/>
+  <div class="row">
+    <div class="col-md-3 text-center">
+        <% if @user.profile.avatar_file_name %>
+            <%= image_tag @user.profile.avatar.url( :thumb ) %>
+        <% else %>
+            <p class="text-center">No Avatar Privided</p>
+        <% end %>
+    </div>
+    <div class="col-md-6">
+        <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
+        <h3>
+            <span class="job-title-icon">
+                <%= job_title_icon %>
+            </span>
+            <%= @user.profile.job_title %>
+        </h3>
+    
+        <div class="well">
+            <p><%= @user.profile.description %></p>
+        </div>
+
+        <div class="well">
+            <% if current_user.plan_id == 2 || current_user.id == @user.id %>
+                <p>Telephone: <%= @user.profile.phone_number %></p>
+                <p>E-mail: <%= @user.profile.contact_email %></p>
+            <% end %>
+        </div>
+    </div>
 <% else %>
-    user profile not provided
+    <div class="col-md-6 col-md-offset-3">
+        <h3 class="text-center">user profile not provided</h3>
+    </div>
 <% end %>
