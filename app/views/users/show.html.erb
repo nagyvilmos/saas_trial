@@ -1,6 +1,7 @@
-User <%= @user.id %><br/>
 <% if @user.profile %>
-
+    <% if @user.profile.avatar_file_name %>
+        <%= image_tag @user.profile.avatar.url( :thumb ) %>
+    <% end %>
     <%= @user.profile.first_name %> <%= @user.profile.last_name %><br/>
     <%= @user.profile.job_title %><br/>
     <% if current_user.plan_id == 2 || current_user.id == @user.id %>
@@ -9,5 +10,5 @@ User <%= @user.id %><br/>
     <% end %>
     <%= @user.profile.description %><br/>
 <% else %>
-user profile not provided
+    user profile not provided
 <% end %>
