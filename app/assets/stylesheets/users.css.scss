@@ -1,10 +1,32 @@
+.profile-avatar {
+    border-radius: 40%;
+    box-shadow: 4px 4px 4px #cccccc;
+    border: 2px white;
+}
 .job-title-icon {
     display: inline-block;
     width: 30px;
     height: 30px;
     border: 2px solid #2e6da4;
-    border-radius: 4px;
     color: white;
     background-color: #7ba2dd;
-     text-align: center;
+    text-align: center;
+    border-radius: 40%;
+}
+
+.well.profile-block {
+    color: white;
+    h3 {
+        margin-top: 0px;
+    }
+}
+
+.well.user-description {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.well.contact-info {
+    background-color: #5bc0de;
+    border-color: #46b8da;
 }
