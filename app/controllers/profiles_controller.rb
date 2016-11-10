@@ -4,13 +4,11 @@ class ProfilesController < ApplicationController
     
     def new
         # form for each user to fill out there own profile
-        #@user = User.find( params[:user_id] )
         @profile = Profile.new
     end
     
     def create
         # create a user profile
-        #@user = User.find( params[:user_id] )
         @profile = @user.build_profile(profile_params)
         if @profile.save
             flash[:success] = "Profile updated"
@@ -22,13 +20,11 @@ class ProfilesController < ApplicationController
     
     def edit
         # edit an existing profile.
-        #@user = User.find( params[:user_id] )
         @profile = @user.profile
     end
     
     def update
         # create a user profile
-        #@user = User.find( params[:user_id] )
         @profile = @user.profile # then?
         if @profile.update_attributes(profile_params)
             flash[:success] = "Profile updated"
